@@ -137,9 +137,6 @@ export const Editor = () => {
         >
           Reset
         </Button>
-        <Button variantColor="teal" bg="teal.400">
-          Download
-        </Button>
       </Box>
     </Grid>
   );
