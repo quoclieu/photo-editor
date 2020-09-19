@@ -21,6 +21,7 @@ export const SidebarItem: FunctionComponent<Props> = ({
       bg={active ? 'teal.400' : 'gray.500'}
       color="white"
       onClick={onClick}
+      margin="1rem"
     >
       {name}
     </Button>

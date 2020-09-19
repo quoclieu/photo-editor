@@ -6,9 +6,8 @@ export const Menubar: FunctionComponent = ({ children }) => {
     <Box
       display="flex"
       justifyContent="space-between"
-      padding="0.5rem"
+      padding="1rem"
       alignItems="flex-start"
-      margin="1rem"
     >
       {children}
     </Box>

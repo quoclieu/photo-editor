@@ -68,7 +68,7 @@ export const Editor = () => {
 
   return (
     <Grid
-      bg="gray.800"
+      bg="gray.700"
       templateColumns="1fr"
       templateRows="auto 1fr auto"
       templateAreas="
@@ -79,30 +79,32 @@ export const Editor = () => {
       h="100vh"
       w="100vw"
     >
-      <Box bg="gray.900" borderRadius="4px" margin="1rem">
-        <Menubar>
-          {options.map((option, index) => {
-            return (
-              <MenuItem
-                key={index}
-                name={option.name}
-                active={index === selectedOptionIndex}
-                onClick={() => setSelectedOptionIndex(index)}
-              />
-            );
-          })}
-        </Menubar>
-        <Box padding="1rem">
-          <Slider
-            value={selectedOption.value}
-            min={selectedOption.range.min}
-            max={selectedOption.range.max}
-            onChange={handleSliderChange}
-          >
-            <SliderTrack bg="gray.300" h="10px" />
-            <SliderFilledTrack bg="purple.500" h="10px" />
-            <SliderThumb size="4" />
-          </Slider>
+      <Box display="flex" justifyContent="center">
+        <Box bg="gray.900" borderRadius="8px" margin="1rem">
+          <Menubar>
+            {options.map((option, index) => {
+              return (
+                <MenuItem
+                  key={index}
+                  name={option.name}
+                  active={index === selectedOptionIndex}
+                  onClick={() => setSelectedOptionIndex(index)}
+                />
+              );
+            })}
+          </Menubar>
+          <Box padding="1rem">
+            <Slider
+              value={selectedOption.value}
+              min={selectedOption.range.min}
+              max={selectedOption.range.max}
+              onChange={handleSliderChange}
+            >
+              <SliderTrack bg="gray.300" h="10px" />
+              <SliderFilledTrack bg="purple.500" h="10px" />
+              <SliderThumb size="4" />
+            </Slider>
+          </Box>
         </Box>
       </Box>
       <MainImage bgImage={`${bgImage}`} style={getImageStyle()} />
