@@ -16,9 +16,10 @@ export const SidebarItem: FunctionComponent<Props> = ({
     <Button
       cursor="pointer"
       padding="1rem"
-      marginBottom="1rem"
-      _active={{ bg: 'gray.400' }}
-      bg={active ? 'gray.300' : ''}
+      _active={{ bg: 'teal.500' }}
+      _hover={{ bg: 'teal.300' }}
+      bg={active ? 'teal.400' : 'gray.500'}
+      color="white"
       onClick={onClick}
     >
       {name}
