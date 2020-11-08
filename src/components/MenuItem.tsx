@@ -1,5 +1,5 @@
-import { Button } from '@chakra-ui/core';
-import React, { FunctionComponent } from 'react';
+import { Button } from "@chakra-ui/core";
+import React, { FunctionComponent } from "react";
 
 interface Props {
   name: string;
@@ -15,10 +15,9 @@ export const SidebarItem: FunctionComponent<Props> = ({
   return (
     <Button
       cursor="pointer"
-      padding="1rem"
-      _active={{ bg: 'teal.500' }}
-      _hover={{ bg: 'teal.300' }}
-      bg={active ? 'teal.400' : 'gray.500'}
+      _active={{ bg: "teal.500" }}
+      _hover={{ bg: "teal.300" }}
+      bg={active ? "teal.400" : "gray.500"}
       color="white"
       onClick={onClick}
       margin="1rem"

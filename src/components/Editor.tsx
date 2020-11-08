@@ -1,5 +1,3 @@
-import React, { useRef, useState } from 'react';
-import { MainImage } from './MainImage';
 import {
   Box,
   Button,
@@ -8,10 +6,12 @@ import {
   SliderFilledTrack,
   SliderThumb,
   SliderTrack,
-} from '@chakra-ui/core';
-import { DEFAULT_OPTIONS } from '../utils/options';
-import { SidebarItem as MenuItem } from './MenuItem';
-import { Menubar } from './Menubar';
+} from "@chakra-ui/core";
+import React, { useRef, useState } from "react";
+import { DEFAULT_OPTIONS } from "../utils/options";
+import { MainImage } from "./MainImage";
+import { Menubar } from "./Menubar";
+import { SidebarItem as MenuItem } from "./MenuItem";
 
 export const Editor = () => {
   const [selectedOptionIndex, setSelectedOptionIndex] = useState(0);
@@ -63,7 +63,7 @@ export const Editor = () => {
       return `${option.property}(${option.value}${option.unit})`;
     });
 
-    return { filter: filters.join(' ') };
+    return { filter: filters.join(" ") };
   };
 
   return (
@@ -101,7 +101,7 @@ export const Editor = () => {
               onChange={handleSliderChange}
             >
               <SliderTrack bg="gray.300" h="10px" />
-              <SliderFilledTrack bg="purple.500" h="10px" />
+              <SliderFilledTrack bg="teal.400" h="10px" />
               <SliderThumb size="4" />
             </Slider>
           </Box>
@@ -119,7 +119,7 @@ export const Editor = () => {
           type="file"
           accept="image/*"
           onChange={handleFileChange}
-          style={{ display: 'none' }}
+          style={{ display: "none" }}
         />
         <Button
           marginRight="1rem"
@@ -134,7 +134,7 @@ export const Editor = () => {
           bg="gray.500"
           color="white"
           marginRight="1rem"
-          _hover={{ bg: 'gray.700' }}
+          _hover={{ bg: "gray.700" }}
           onClick={handleReset}
         >
           Reset
